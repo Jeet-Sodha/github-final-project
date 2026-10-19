@@ -1,0 +1,55 @@
+
+jeets@Jeet MINGW64 ~/Downloads/ibm/mcino-Introduction-to-Git-and-GitHub (main)
+$    cat README.md | grep XYZ
+   git checkout -b bug-fix-revert
+_© 2026 XYZ, Inc._
+Switched to a new branch 'bug-fix-revert'
+
+jeets@Jeet MINGW64 ~/Downloads/ibm/mcino-Introduction-to-Git-and-GitHub (bug-fix-revert)
+$    git log --oneline
+   git revert <commit-hash>
+229dbc4 (HEAD -> bug-fix-revert, origin/bug-fix-typo, main, bug-fix-typo) Fix typo in README footer: update year from 2022 to 2026
+f7b453b (origin/main, origin/HEAD) Create forked-repo
+ad95b0a Create close_pr.yml
+13af262 Create feature_request.md
+cd5f237 Create bug_report.md
+cdeb355 Create CODE_OF_CONDUCT.md
+3f7857c Create CONTRIBUTING.md
+2a3b643 Create simple-interest.sh
+f4e5aa3 Create compound_interest.py
+d8324ad Update README.md
+484d879 Initial commit
+bash: syntax error near unexpected token `newline'
+
+jeets@Jeet MINGW64 ~/Downloads/ibm/mcino-Introduction-to-Git-and-GitHub (bug-fix-revert)
+$    git push origin bug-fix-revert
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'bug-fix-revert' on GitHub by visiting:
+remote:      https://github.com/Jeet-Sodha/mcino-Introduction-to-Git-and-GitHub/pull/new/bug-fix-revert
+remote: 
+To https://github.com/Jeet-Sodha/mcino-Introduction-to-Git-and-GitHub.git
+ * [new branch]      bug-fix-revert -> bug-fix-revert
+
+jeets@Jeet MINGW64 ~/Downloads/ibm/mcino-Introduction-to-Git-and-GitHub (bug-fix-revert)
+$    git add .
+warning: in the working copy of 'merge_branches', LF will be replaced by CRLF the next time Git touches it
+
+jeets@Jeet MINGW64 ~/Downloads/ibm/mcino-Introduction-to-Git-and-GitHub (bug-fix-revert)
+$    git push origin bug-fix-revert
+Everything up-to-date
+
+jeets@Jeet MINGW64 ~/Downloads/ibm/mcino-Introduction-to-Git-and-GitHub (bug-fix-revert)
+$ { echo '$ curl -s https://api.github.com/repos/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pulls/12607 | jq -r ".head.repo.clone_url"'; curl -s https://api.github.com/repos/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pulls/12607 | jq -r '.head.repo.clone_url'; } | tee bug-fix-revert
+bash: jq: command not found
+$ curl -s https://api.github.com/repos/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pulls/12607 | jq -r ".head.repo.clone_url"
+
+jeets@Jeet MINGW64 ~/Downloads/ibm/mcino-Introduction-to-Git-and-GitHub (bug-fix-revert)
+$ ^C
+
+jeets@Jeet MINGW64 ~/Downloads/ibm/mcino-Introduction-to-Git-and-GitHub (bug-fix-revert)
+$ cat bug-fix-revert
+$ curl -s https://api.github.com/repos/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pulls/12607 | jq -r ".head.repo.clone_url"
+
+jeets@Jeet MINGW64 ~/Downloads/ibm/mcino-Introduction-to-Git-and-GitHub (bug-fix-revert)
+$ 
