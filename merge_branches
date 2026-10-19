@@ -1,40 +1,5 @@
-$ cd mcino-Introduction-to-Git-and-GitHub
-   git checkout -b bug-fix-typo
-fatal: a branch named 'bug-fix-typo' already exists
-
-jeets@Jeet MINGW64 ~/Downloads/ibm/mcino-Introduction-to-Git-and-GitHub (bug-fix-typo)
-$ git branch
-* bug-fix-typo
-  main
-
-jeets@Jeet MINGW64 ~/Downloads/ibm/mcino-Introduction-to-Git-and-GitHub (bug-fix-typo)
-$    sed -i 's/2022 XYZ, Inc./2026 XYZ, Inc./' README.md
-   grep "XYZ" README.md
-_© 2026 XYZ, Inc._
-
-jeets@Jeet MINGW64 ~/Downloads/ibm/mcino-Introduction-to-Git-and-GitHub (bug-fix-typo)
-$    git add README.md
-   git commit -m "Fix typo in README footer: update year from 2022 to 2026"
-   git push origin bug-fix-typo
-warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
-[bug-fix-typo 229dbc4] Fix typo in README footer: update year from 2022 to 2026
- 1 file changed, 1 insertion(+), 1 deletion(-)
-Enumerating objects: 5, done.
-Counting objects: 100% (5/5), done.
-Delta compression using up to 12 threads
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 340 bytes | 340.00 KiB/s, done.
-Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
-remote: 
-remote: Create a pull request for 'bug-fix-typo' on GitHub by visiting:
-remote:      https://github.com/Jeet-Sodha/mcino-Introduction-to-Git-and-GitHub/pull/new/bug-fix-typo
-remote: 
-To https://github.com/Jeet-Sodha/mcino-Introduction-to-Git-and-GitHub.git
- * [new branch]      bug-fix-typo -> bug-fix-typo
-
-jeets@Jeet MINGW64 ~/Downloads/ibm/mcino-Introduction-to-Git-and-GitHub (bug-fix-typo)
-$    { echo '$ git checkout main'; git checkout main; echo '$ git merge bug-fix-typo'; git merge bug-fix-typo; } 2>&1 | tee merge_branches
+jeets@Jeet MINGW64 ~/Downloads/ibm/mcino-Introduction-to-Git-and-GitHub (bug-fix-revert)
+$ cat merge_branches
 $ git checkout main
 Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
@@ -43,6 +8,3 @@ Updating f7b453b..229dbc4
 Fast-forward
  README.md | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
-
-jeets@Jeet MINGW64 ~/Downloads/ibm/mcino-Introduction-to-Git-and-GitHub (main)
-$ 
