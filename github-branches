@@ -1,0 +1,10 @@
+
+jeets@Jeet MINGW64 ~/Downloads/ibm/mcino-Introduction-to-Git-and-GitHub (bug-fix-revert)
+$ { echo '$ git branch -vv'; git branch -vv; } | tee github-branches
+$ git branch -vv
+* bug-fix-revert 229dbc4 Fix typo in README footer: update year from 2022 to 2026
+  bug-fix-typo   229dbc4 Fix typo in README footer: update year from 2022 to 2026
+  main           229dbc4 [origin/main: ahead 1] Fix typo in README footer: update year from 2022 to 2026
+
+jeets@Jeet MINGW64 ~/Downloads/ibm/mcino-Introduction-to-Git-and-GitHub (bug-fix-revert)
+$ 
